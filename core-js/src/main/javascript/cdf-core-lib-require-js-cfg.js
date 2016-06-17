@@ -80,6 +80,16 @@
   //modernizr 2.8.3
   requirePaths['cdf/lib/modernizr'] = prefix + '/modernizr/modernizr-2.8.3';
 
+  //sanitizer 
+  requirePaths['cdf/lib/sanitizer'] = prefix + "/sanitizer/sanitizer";
+  amdShim["cdf/lib/sanitizer"] = {
+    exports: "sanitizer",
+    deps: {
+      "cdf/lib/sanitizer/lib": "html4",
+	  "cdf/lib/sanitizer/lib": "uri"
+    }    
+  };
+
   //jquery 1.9.1, without globally scoped variables
   requirePaths['cdf/lib/jquery'] = prefix + '/jQuery/jquery';
   requireShims['cdf/lib/jquery'] = {
