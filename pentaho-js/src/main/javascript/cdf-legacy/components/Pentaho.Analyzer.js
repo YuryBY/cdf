@@ -42,7 +42,7 @@
 
     },
 
-    getOptions: function() {
+    getOptions: function() {	
         var options = {
             solution: this.solution,
             path: this.path,
@@ -50,6 +50,7 @@
             command: this.command == undefined ? "open" : this.command,
             showFieldList: this.showFieldList == undefined ? false : this.showFieldList,
             showRepositoryButtons: this.showRepositoryButtons == undefined ? false : this.showRepositoryButtons,
+            dateFormat: (this.dateFormat == undefined || this.dateFormat == null) ? 'yy-mm-dd 00:00:00.0' : this.dateFormat,
             frameless: this.frameless == undefined ? false : this.frameless
         };
         // process params and update options
